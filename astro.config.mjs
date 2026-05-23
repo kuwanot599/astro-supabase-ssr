@@ -1,7 +1,8 @@
 import { defineConfig } from 'astro/config';
-import cloudflare from '@astrojs/cloudflare'; // これが必要です
+import cloudflare from '@astrojs/cloudflare';
 
+// https://astro.build/config
 export default defineConfig({
-  output: 'server', // SSRモードの指定
-  adapter: cloudflare(), // Cloudflare用のアダプター
+  output: 'server',
+  adapter: cloudflare(),
 });
