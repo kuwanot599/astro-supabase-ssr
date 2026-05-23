@@ -1,8 +1,12 @@
 import { defineConfig } from 'astro/config';
 import cloudflare from '@astrojs/cloudflare';
 
-// https://astro.build/config
 export default defineConfig({
   output: 'server',
-  adapter: cloudflare(),
+  adapter: cloudflare({
+    // Cloudflare Pagesの最新の規格に強制適合させます
+    platformProxy: {
+      enabled: true
+    }
+  })
 });
